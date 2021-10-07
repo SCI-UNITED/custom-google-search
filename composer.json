@@ -1,0 +1,23 @@
+{
+    "name": "lumenvo/custom-google-search",
+    "description": "The Custom Google Search extension for Magento 2 Aby Lumenvo",
+    "authors": [
+        {
+            "name": "Lumenvo",
+            "email": "help@lumenvo.com"
+        }
+    ],
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Lumenvo\\CustomGoogleSearch\\": ""
+        }
+    }
+}
