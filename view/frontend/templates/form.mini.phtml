@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var $block Lumenvo\CustomGoogleSearch\Block\Search
+ */
+
+$resultsUrl = $block->resultsUrl();
+?>
+
+<script>
+    window.onload = function () {
+        document.getElementById('gsc-i-id1').placeholder = 'Filter through all our products. Start your search here.';
+    };
+</script>
+
+<div class="gcse-searchbox-only" data-resultsUrl="<?php echo /* @escapeNotVerified */
+__($resultsUrl); ?>" data-newWindow="false" data-queryParameterName="q"></div>

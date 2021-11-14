@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="lumenvo-search-result"/>
+
+        <referenceBlock name="search_suggestions" remove="true"/>
+        <referenceBlock name="search_recommendations" remove="true"/>
+        <referenceBlock name="search.result" remove="true"/>
+
+        <referenceContainer name="content">
+
+            <block class="Lumenvo\CustomGoogleSearch\Block\Result" name="cse.search.result" template="result.phtml"
+                   cacheable="false">
+
+            </block>
+        </referenceContainer>
+        <move element="page.main.title" destination="content" before="-"/>
+    </body>
+</page>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="Lumenvo_CustomGoogleSearch::js/cse.js"/>
+    </head>
+    <body>
+        <block class="Magento\Framework\View\Element\Text\ListText" name="head.additional">
+            <block name="cse.script" class="Lumenvo\CustomGoogleSearch\Block\Search"
+                   template="Lumenvo_CustomGoogleSearch::cse.script.phtml"/>
+        </block>
+
+        <referenceContainer name="header-wrapper">
+            <container name="search.box.container" htmlTag="div" htmlClass="search-box-container" after="-">
+
+                <block class="Lumenvo\CustomGoogleSearch\Block\Search"
+                       ifconfig="lumenvo_custom_google_search/general/active" name="top.search" as="topSearch"
+                       after="logo"
+                       template="Lumenvo_CustomGoogleSearch::form.mini.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

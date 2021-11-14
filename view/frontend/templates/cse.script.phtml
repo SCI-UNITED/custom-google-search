@@ -1,0 +1,12 @@
+<?php
+/**
+ * @var $block Lumenvo\CustomGoogleSearch\Block\Search
+ */
+
+
+$clientID = $block->userId();
+
+?>
+
+<script src="https://cse.google.com/cse.js?cx=<?php echo /* @escapeNotVerified */
+__($clientID); ?>"></script>
